@@ -2,11 +2,11 @@ name: A workflow for Hello World file
 on: push
 
 jobs:
-  build:
-    name: Hello World action
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: ./actions-a
-        env:
+  build: # identifier of job
+    name: Hello World action # label shown in Github when running
+    runs-on: ubuntu-latest 
+    steps: # sequence of operations
+      - uses: actions/checkout@first-action # use builtin action checkout to checkout master branch of our repository
+      - uses: ./actions-a # use custom action a
+        env: # environment variables available to the action
           MY_NAME: "Mona"
