@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest 
     steps: # sequence of operations
       - uses: actions/checkout@master # use builtin action checkout (available from a master)
-      - uses: ./actions-a # use custom action a
+      - uses: ./action-a # use custom action a
         env: # environment variables available to the action
           MY_NAME: "Mona"
