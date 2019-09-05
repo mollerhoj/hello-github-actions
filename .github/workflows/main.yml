@@ -6,7 +6,7 @@ jobs:
     name: Hello World action # label shown in Github when running
     runs-on: ubuntu-latest 
     steps: # sequence of operations
-      - uses: actions/checkout@first-action # use builtin action checkout to checkout master branch of our repository
+      - uses: actions/checkout@master # use builtin action checkout (available from a master)
       - uses: ./actions-a # use custom action a
         env: # environment variables available to the action
           MY_NAME: "Mona"
